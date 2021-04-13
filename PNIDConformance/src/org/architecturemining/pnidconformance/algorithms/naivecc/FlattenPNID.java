@@ -28,11 +28,11 @@ import javafx.util.Pair;
 /**
  * @author J. Ree
  * 
- *  We flatten the process model; unfold process model in a classic petri net up to max unfold parameter(bound on identifiers)
- *  That is, create a place for each possible place and vector of identifiers in a classic Petri net.
+ *  We flatten the PNID; unfold process model to a classic petri net up to max unfold parameter (bound on identifiers)
+ *  That is, create a place for each possible vector of identifiers in a classic Petri net and create a transition for each possible valuation.
  *  Using a well-order on the set of identifiers we ensure identifiers are not modelled twice.
  *
- *	Note: For some PNIDs a counter place (or multiple counter places) are required to be able to flatten the PNID correctly.
+ *	Note: For some PNIDs a counter place (or multiple counter places) is required to be able to flatten the PNID correctly.
  *  	  Counter places can be added to the PNID manually with "c+" and "c-" on the in and out arcs.
  */
 

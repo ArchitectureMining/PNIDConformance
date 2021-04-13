@@ -17,11 +17,11 @@ public class NaiveCC {
 	
 	public static PNIDModel naiveCC(PNIDModel pnid, LogModel log, int maxUnfold) {	
 		// Generate flat petri net such that alignment technique can be applied
-		PNIDModel flatPetriNet = FlattenPNID.generateFlatPN(pnid, maxUnfold);
+		PNIDModel flatPN = FlattenPNID.generateFlatPN(pnid, maxUnfold);
 		
 		// Find closest trace - alignment technique
 		List<Object> trace = null;
 		
-		return flatPetriNet;
+		return flatPN;
 	}
 }
