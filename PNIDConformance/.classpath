@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry including="**/*.java" kind="src" output="target/test-classes" path="tests/src-test">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="/pnidprocessor"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-9">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.apache.ivyde.eclipse.cpcontainer.IVYDE_CONTAINER/?project=Workshop&amp;ivyXmlPath=ivy.xml&amp;confs=*&amp;ivySettingsPath=ivysettings.xml&amp;loadSettingsOnDemand=false&amp;ivyUserDir=&amp;propertyFiles="/>
+	<classpathentry kind="lib" path="C:/Users/Janjaap/.p2/pool/plugins/org.pnml.tools.epnk_1.2.0.201801152103.jar" sourcepath="C:/Users/Janjaap/.p2/pool/plugins/org.pnml.tools.epnk_1.2.0.201801152103.jar">
+		<accessrules>
+			<accessrule kind="accessible" pattern="org/pnml/tools/epnk/datatypes/pnmldatatypes/*"/>
+			<accessrule kind="accessible" pattern="org/pnml/tools/epnk/datatypes/pnmldatatypes/impl/*"/>
+			<accessrule kind="accessible" pattern="org/pnml/tools/epnk/graphics/datatypes/*"/>
+			<accessrule kind="accessible" pattern="org/pnml/tools/epnk/helpers/*"/>
+			<accessrule kind="accessible" pattern="org/pnml/tools/epnk/pnmlcoremodel/*"/>
+			<accessrule kind="accessible" pattern="org/pnml/tools/epnk/pnmlcoremodel/impl/*"/>
+			<accessrule kind="accessible" pattern="org/pnml/tools/epnk/pnmlcoremodel/serialisation/*"/>
+			<accessrule kind="accessible" pattern="org/pnml/tools/epnk/pnmlcoremodel/util/*"/>
+			<accessrule kind="accessible" pattern="org/pnml/tools/epnk/pntypes/extension/*"/>
+			<accessrule kind="accessible" pattern="org/pnml/tools/epnk/serialisation/*"/>
+			<accessrule kind="accessible" pattern="org/pnml/tools/epnk/serialisation/impl/*"/>
+			<accessrule kind="accessible" pattern="org/pnml/tools/epnk/serialisation/util/*"/>
+			<accessrule kind="accessible" pattern="org/pnml/tools/epnk/structuredpntypemodel/*"/>
+			<accessrule kind="accessible" pattern="org/pnml/tools/epnk/structuredpntypemodel/impl/*"/>
+			<accessrule kind="accessible" pattern="org/pnml/tools/epnk/structuredpntypemodel/util/*"/>
+			<accessrule kind="accessible" pattern="org/pnml/tools/epnk/toolspecific/diagraminfo/*"/>
+			<accessrule kind="accessible" pattern="org/pnml/tools/epnk/toolspecific/diagraminfo/factory/*"/>
+			<accessrule kind="accessible" pattern="org/pnml/tools/epnk/toolspecific/diagraminfo/impl/*"/>
+			<accessrule kind="accessible" pattern="org/pnml/tools/epnk/toolspecific/diagraminfo/util/*"/>
+			<accessrule kind="accessible" pattern="org/pnml/tools/epnk/toolspecific/extension/*"/>
+			<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="lib" path="/modeler/target/jar/processengine.jar"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
