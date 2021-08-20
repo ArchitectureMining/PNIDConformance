@@ -1,0 +1,4 @@
+concept:instance,concept:name,org:resource,time:timestamp
+1,T,"a0,b1",2000-01-01T01:00:00.000+01:00
+1,U,"a0,b1",2000-01-01T01:00:00.000+01:00
+1,V,"a0,b1,c2",2000-01-01T01:00:00.000+01:00

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pnml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+  <net type="http://org.pnml.tools/epnk/types/pnids" id="n1">
+	<page id="pg1">
+        <place id="p1">
+            <initialMarking>
+                <structure>
+                    <token/>
+                </structure>
+            </initialMarking>
+        </place>
+        <place id="p2">
+            <initialMarking>
+                <structure>
+                    <token/>
+                </structure>
+            </initialMarking>
+        </place>
+        <place id="p3" label="order"> 
+        </place>
+        <place id="p4" label="products">
+            <initialMarking>
+                <structure>
+                    <token/>
+                </structure>
+            </initialMarking>
+        </place>
+        <place id="p5" label="orderline">
+        </place>
+        <place id="p6" label="delivery">
+        </place>
+        <place id="p7">
+        </place>
+        <place id="p8">
+        </place>
+
+		<transition id="CreateOrder">
+		</transition>
+        <transition id="CreateDelivery">
+		</transition>
+        <transition id="AddProduct">
+		</transition>
+        <transition id="AddItem">
+		</transition>
+        <transition id="SendInvoice">
+		</transition>
+        <transition id="Deliver">
+		</transition>
+
+		<arc id="a1" source="p1" target="CreateOrder">
+		</arc>
+		<arc id="a2" source="p2" target="CreateDelivery">
+		</arc>
+        <arc id="a3" source="CreateOrder" target="p3">
+		    <inscription>
+                <structure>
+                    <variable>
+                        <text>o</text>
+                    </variable>
+                </structure>
+			</inscription>
+		</arc>
+        <arc id="a4" source="CreateDelivery" target="p6">
+		    <inscription>
+                <structure>
+                    <variable>
+                        <text>d</text>
+                    </variable>
+                </structure>
+			</inscription>
+		</arc>
+        <arc id="a5" source="p3" target="SendInvoice">
+		    <inscription>
+                <structure>
+                    <variable>
+                        <text>o</text>
+                    </variable>
+                </structure>
+			</inscription>
+		</arc>
+        <arc id="a6" source="SendInvoice" target="p7">
+		</arc>
+        <arc id="a7" source="p3" target="AddProduct">
+		    <inscription>
+                <structure>
+                    <variable>
+                        <text>o</text>
+                    </variable>
+                </structure>
+			</inscription>
+		</arc>
+        <arc id="a8" source="AddProduct" target="p3">
+		    <inscription>
+                <structure>
+                    <variable>
+                        <text>o</text>
+                    </variable>
+                </structure>
+			</inscription>
+		</arc>
+        <arc id="a9" source="AddProduct" target="p4">
+            <inscription>
+                <structure>
+                    <variable>
+                        <text>p</text>
+                    </variable>
+                </structure>
+			</inscription>
+		</arc>
+        <arc id="a10" source="AddProduct" target="p5">
+		    <inscription>
+                <structure>
+                    <variable>
+                        <text>o</text>
+                    </variable>
+                    <variable>
+                        <text>p</text>
+                    </variable>
+                </structure>
+			</inscription>
+		</arc>
+        <arc id="a11" source="p5" target="AddItem">
+		    <inscription>
+                <structure>
+                    <variable>
+                        <text>o</text>
+                    </variable>
+                    <variable>
+                        <text>p</text>
+                    </variable>
+                </structure>
+			</inscription>
+		</arc>
+        <arc id="a12" source="AddItem" target="p6">
+		    <inscription>
+                <structure>
+                    <variable>
+                        <text>d</text>
+                    </variable>
+                </structure>
+			</inscription>
+		</arc>
+        <arc id="a13" source="p6" target="AddItem">
+		    <inscription>
+                <structure>
+                    <variable>
+                        <text>d</text>
+                    </variable>
+                </structure>
+			</inscription>
+		</arc>
+        <arc id="a14" source="p4" target="AddProduct">
+		</arc>
+        <arc id="a15" source="p6" target="Deliver">
+		    <inscription>
+                <structure>
+                    <variable>
+                        <text>d</text>
+                    </variable>
+                </structure>
+			</inscription>
+		</arc>
+        <arc id="a16" source="Deliver" target="p8">
+		</arc>
+	</page>
+  </net>
+</pnml>

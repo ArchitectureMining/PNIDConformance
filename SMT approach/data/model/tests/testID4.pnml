@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pnml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+  <net type="http://org.pnml.tools/epnk/types/pnids" id="n1">
+	<page id="pg1">
+	  <place id="p1">
+	  	 <initialMarking>
+		  <structure>
+			<token/>
+		  </structure>
+		</initialMarking>
+	  </place>
+	  <place id="p2"></place>
+	  <place id="p3"></place>
+	  <place id="p4"></place>
+	  <place id="p5"></place>
+		<transition id="T">
+		</transition>
+		<transition id="U">
+		</transition>
+		<transition id="V">
+		</transition>
+		<transition id="H">
+		</transition>
+		<arc id="a1" source="p1" target="T">
+		<inscription>
+			<structure>
+				<variable>
+				<text>a</text>
+				</variable>
+			</structure>
+			</inscription>
+		</arc>
+		<arc id="a2" source="T" target="p2">
+		<inscription>
+			<structure>
+			<variable>
+				<text>a</text>
+				</variable>
+			</structure>
+			</inscription>
+		</arc>
+		<arc id="a3" source="p2" target="U">
+		<inscription>
+			<structure>
+			<variable>
+				<text>a</text>
+				</variable>
+			</structure>
+			</inscription>
+		</arc>
+		<arc id="a4" source="U" target="p3">
+		<inscription>
+			<structure>
+			<variable>
+				<text>a</text>
+				</variable>
+			</structure>
+			</inscription>
+		</arc>
+		<arc id="a5" source="p3" target="V">
+		<inscription>
+			<structure>
+			<variable>
+				<text>a</text>
+				</variable>
+			</structure>
+			</inscription>
+		</arc>
+		<arc id="a6" source="V" target="p4">
+		<inscription>
+			<structure>
+			<variable>
+				<text>a</text>
+				</variable>
+			</structure>
+			</inscription>
+		</arc>
+		<arc id="a7" source="p4" target="H">
+		<inscription>
+			<structure>
+			<variable>
+				<text>a</text>
+				</variable>
+			</structure>
+			</inscription>
+		</arc>
+		<arc id="a8" source="H" target="p5">
+		<inscription>
+			<structure>
+			<variable>
+				<text>a</text>
+				</variable>
+			</structure>
+			</inscription>
+		</arc>
+	</page>
+  </net>
+</pnml>

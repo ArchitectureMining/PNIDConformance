@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pnml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+  <net type="http://org.pnml.tools/epnk/types/pnids" id="n1">
+	<page id="pg1">
+	  <place id="p1">
+	  	 <initialMarking>
+		  <structure>
+			<token/>
+		  </structure>
+		</initialMarking>
+	  </place>
+	  <place id="p2"></place>
+	<transition id="100">
+	</transition>
+	<arc id="a1" source="p1" target="100">
+	</arc>
+	<arc id="a2" source="100" target="p2">
+	</arc>
+	</page>
+  </net>
+</pnml>

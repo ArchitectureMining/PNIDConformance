@@ -1,0 +1,7 @@
+concept:instance,concept:name,org:resource,time:timestamp
+1,CreateOrder,"o0",2000-01-01T01:00:00.000+01:00
+1,CreateDelivery,"d1",2000-01-01T01:00:00.000+01:00
+1,AddProduct,"o0,p2",2000-01-01T01:00:00.000+01:00
+1,AddItem,"o0,p2,d1",2000-01-01T01:00:00.000+01:00
+1,SendInvoice,"",2000-01-01T01:00:00.000+01:00
+1,Deliver,"",2000-01-01T01:00:00.000+01:00

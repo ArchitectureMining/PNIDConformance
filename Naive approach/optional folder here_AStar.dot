@@ -1,0 +1,97 @@
+Digraph SP { 
+ rankdir=LR;
+
+p0 [label=<p1<br/>i:1>,shape=circle];
+p1 [label=<p2<br/>f:1>,shape=circle];
+{ rank=same;p0; }
+{ rank=same;p1; }
+t0 [label=<T<br/>r:-2<br/>c:1>,style=filled,fillcolor=darkorchid1,fontcolor=white,shape=box];
+p0 -> t0 [weight=10];
+t0 -> p1 [weight=10];
+}Digraph D {
+subgraph cluster_0
+{
+label=<Iteration 0>;
+rankdir=LR;
+color=black;
+i0m0 -> i0m1 [label=<<b>T<br/>1</b>>,fontcolor=darkorchid1,weight=999];
+i0m0 [label=<(m0)<BR/>[p1]<BR/>g=0,h=1>,style=bold];
+i0m0 -> i0m1 [color=red];
+i0m1 [label=<m1<BR/>[p2]<BR/>g=1,h=0>,color=blue,style=bold];
+info [shape=plaintext,label=<Exit code for alignment: 1<br/>Length of the alignment found: 1<br/>Length of the orignal trace: 1<br/>Places in the synchronous product: 2<br/>Transtions in the synchronous product: 1<br/>Cost of the alignment: 1<br/>Transitions fired: 1<br/>Markings polled from queue: 2<br/>Markings added to closed set: 1<br/>Markings queued: 2<br/>Markings reached: 2<br/>Heuristics computed: 1<br/>Heuristics estimated: 0<br/>Heuristics derived: 1<br/>Maximum queue length (elts): 1<br/>Maximum queue capacity (elts): 16<br/>Maximum capacity visited set (elts): 37<br/>Approximate peak memory used (kb): 0<br/>Time to compute alignment (us): 12882<br/>Time to compute heuristics (us): 239<br/>Time to setup algorithm (us): 7255<br/>Total Time including setup (us): 20137<br/>Number of splits when splitting marking: 0<br/>Log move cost of alignment: 0<br/>Model move cost of alignment: 1<br/>Synchronous move cost of alignment: 0<br/>Pre-processing time (us): 1027<br/>Size of the constraintset: 0<br/>Number of times replay was restarted: 0<br/>>];
+}
+}
+Digraph A { 
+ rankdir=LR;
+{ rank=same;p0; }
+t0 [label=<T<br/>r:-2<br/>c:1>,style=filled,fillcolor=darkorchid1,fontcolor=white,shape=box];
+p0 [label=<p1<br/>i:1>,shape=circle];
+p0 -> t0 [weight=10];
+p1 [label=<p2<br/>f:1>,shape=circle];
+t0 -> p1 [weight=10];
+{ rank=same;p1; }
+}Digraph SP { 
+ rankdir=LR;
+
+p0 [label=<p1<br/>i:1>,shape=circle];
+p1 [label=<p2<br/>f:1>,shape=circle];
+p2 [label=<pe_0<br/>i:1>,shape=circle];
+p3 [label=<pe_1>,shape=circle];
+p4 [label=<pe_2<br/>f:1>,shape=circle];
+{ rank=same;p0; p2; }
+{ rank=same;p1; p4; }
+t0 [label=<T<br/>r:-2<br/>c:1>,style=filled,fillcolor=darkorchid1,fontcolor=white,shape=box];
+p0 -> t0 [weight=10];
+t0 -> p1 [weight=10];
+t1 [label=<e0(0)<br/>r:0<br/>c:1>,style=filled,fillcolor=goldenrod2,fontcolor=black,shape=box];
+p2 -> t1 [weight=10];
+t1 -> p3 [weight=10];
+t2 [label=<e1(0)<br/>r:1<br/>c:1>,style=filled,fillcolor=goldenrod2,fontcolor=black,shape=box];
+p3 -> t2 [weight=10];
+t2 -> p4 [weight=10];
+}Digraph D {
+subgraph cluster_0
+{
+label=<Iteration 0>;
+rankdir=LR;
+color=black;
+i0m0 -> i0m1 [label=<<b>T<br/>1</b>>,fontcolor=darkorchid1,weight=999];
+{rank=same; i0m0; i0m2  }
+i0m0 -> i0m2 [label=<<b>e0(0)<br/>1</b>>,fontcolor=goldenrod2,weight=999];
+i0m0 [label=<(m0)<BR/>[p1,pe_0]<BR/>g=0,h=3>,style=bold];
+{rank=same; i0m2; i0m3  }
+i0m2 -> i0m3 [label=<<b>e1(0)<br/>1</b>>,fontcolor=goldenrod2,weight=999];
+i0m2 [label=<(m2)<BR/>[p1,pe_1]<BR/>g=1,h=2>,color=blue,style=bold];
+i0m3 [label=<(m3)<BR/>[p1,pe_2]<BR/>g=2,h=1>,color=blue,style=bold];
+{rank=same; i0m1; i0m4  }
+i0m1 -> i0m4 [label=<<b>e0(0)<br/>1</b>>,fontcolor=goldenrod2,weight=999];
+i0m1 [label=<(m1)<BR/>[p2,pe_0]<BR/>g=1,h=2>,color=blue,style=bold];
+{rank=same; i0m4; i0m5  }
+i0m4 -> i0m5 [label=<<b>e1(0)<br/>1</b>>,fontcolor=goldenrod2,weight=999];
+i0m4 [label=<(m4)<BR/>[p2,pe_1]<BR/>g=2,h=1>,color=blue,style=bold];
+i0m4 -> i0m5 [color=red];
+i0m1 -> i0m4 [color=red];
+i0m0 -> i0m1 [color=red];
+i0m5 [label=<m5<BR/>[p2,pe_2]<BR/>g=3,h=0>,color=blue,style=bold];
+info [shape=plaintext,label=<Exit code for alignment: 1<br/>Length of the alignment found: 3<br/>Length of the orignal trace: 2<br/>Places in the synchronous product: 5<br/>Transtions in the synchronous product: 3<br/>Cost of the alignment: 3<br/>Transitions fired: 5<br/>Markings polled from queue: 6<br/>Markings added to closed set: 5<br/>Markings queued: 6<br/>Markings reached: 6<br/>Heuristics computed: 1<br/>Heuristics estimated: 0<br/>Heuristics derived: 5<br/>Maximum queue length (elts): 2<br/>Maximum queue capacity (elts): 16<br/>Maximum capacity visited set (elts): 37<br/>Approximate peak memory used (kb): 1<br/>Time to compute alignment (us): 4477<br/>Time to compute heuristics (us): 111<br/>Time to setup algorithm (us): 31<br/>Total Time including setup (us): 4508<br/>Number of splits when splitting marking: 0<br/>Log move cost of alignment: 2<br/>Model move cost of alignment: 1<br/>Synchronous move cost of alignment: 0<br/>Pre-processing time (us): 184<br/>Size of the constraintset: 0<br/>Number of times replay was restarted: 0<br/>>];
+}
+}
+Digraph A { 
+ rankdir=LR;
+{ rank=same;p0; p2; }
+t0 [label=<T<br/>r:-2<br/>c:1>,style=filled,fillcolor=darkorchid1,fontcolor=white,shape=box];
+p0 [label=<p1<br/>i:1>,shape=circle];
+p0 -> t0 [weight=10];
+p1 [label=<p2<br/>f:1>,shape=circle];
+t0 -> p1 [weight=10];
+t1 [label=<e0(0)<br/>r:0<br/>c:1>,style=filled,fillcolor=goldenrod2,fontcolor=black,shape=box];
+p2 [label=<pe_0<br/>i:1>,shape=circle];
+p2 -> t1 [weight=10];
+p8 [label=<pe_1>,shape=circle];
+t1 -> p8 [weight=10];
+t2 [label=<e1(0)<br/>r:1<br/>c:1>,style=filled,fillcolor=goldenrod2,fontcolor=black,shape=box];
+p8 -> t2 [weight=10];
+p14 [label=<pe_2<br/>f:1>,shape=circle];
+t2 -> p14 [weight=10];
+{ rank=same;p1; p14; }
+}
